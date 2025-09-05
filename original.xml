@@ -1,0 +1,72 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<WebDynpro xmlns="http://www.sap.com/wd/webdynpro">
+  <View name="MM03View">
+    <Title>Material Master Data (MM03)</Title>
+    <FormContainer id="formContainer1">
+      <FormElement id="materialNumberElement">
+        <Label text="Material Number" />
+        <InputField id="materialNumberField" value="{/materialData/materialNumber}" enabled="false"/>
+      </FormElement>
+      <FormElement id="materialDescriptionElement">
+        <Label text="Material Description" />
+        <InputField id="materialDescriptionField" value="{/materialData/materialDescription}"/>
+      </FormElement>
+      <FormElement id="plantElement">
+        <Label text="Plant" />
+        <InputField id="plantField" value="{/materialData/plant}"/>
+      </FormElement>
+      <FormElement id="materialGroupElement">
+        <Label text="Material Group" />
+        <InputField id="materialGroupField" value="{/materialData/materialGroup}"/>
+      </FormElement>
+      <FormElement id="baseUnitElement">
+        <Label text="Base Unit of Measure" />
+        <InputField id="baseUnitField" value="{/materialData/baseUnit}"/>
+      </FormElement>
+      <!-- Add more FormElements as needed -->
+    </FormContainer>
+    <Button id="saveButton" text="Save" press="onSave"/>
+    <MessageArea id="messageArea"/>
+  </View>
+  <Controller name="MM03ViewController">
+    <!-- Context Node -->
+    <Context>
+      <Node name="materialData">
+        <Attribute name="materialNumber" type="String"/>
+        <Attribute name="materialDescription" type="String"/>
+        <Attribute name="plant" type="String"/>
+        <Attribute name="materialGroup" type="String"/>
+        <Attribute name="baseUnit" type="String"/>
+      </Node>
+    </Context>
+    <Method name="onSave">
+      <!--Implementation to save the data -->
+      <![CDATA[
+        //Implementation to save the data to backend system.
+        //This is a placeholder.  Replace with actual code to save the data
+        wdContext.nodeMaterialData().currentMaterialDataElement().setMaterialNumber(wdContext.currentMaterialNumberField().getText());
+        wdContext.nodeMaterialData().currentMaterialDataElement().setMaterialDescription(wdContext.currentMaterialDescriptionField().getText());
+        wdContext.nodeMaterialData().currentMaterialDataElement().setPlant(wdContext.currentPlantField().getText());
+        wdContext.nodeMaterialData().currentMaterialDataElement().setMaterialGroup(wdContext.currentMaterialGroupField().getText());
+        wdContext.nodeMaterialData().currentMaterialDataElement().setBaseUnit(wdContext.currentBaseUnitField().getText());
+
+        try{
+          //Call backend service or BAPI to save the data.
+          //Handle success and failure scenarios.
+          wdComponentAPI.getMessageManager().reportSuccess("Data saved successfully!");
+        }catch(Exception e){
+          wdComponentAPI.getMessageManager().reportException(e,"Error saving data");
+        }
+
+      ]]>
+    </Method>
+    <Method name="wdDoInit">
+      <![CDATA[
+        //Initialization Logic
+        wdContext.nodeMaterialData().bind(wdThis.getModel().getData()); // Assuming you have a model with test data.
+
+      ]]>
+    </Method>
+
+  </Controller>
+</WebDynpro>

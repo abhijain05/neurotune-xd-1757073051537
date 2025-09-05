@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<mvc:View xmlns:mvc="sap.ui.core.mvc"
+  xmlns="sap.m"
+  xmlns:layout="sap.ui.layout"
+  xmlns:form="sap.ui.layout.form"
+  xmlns:core="sap.ui.core"
+  xmlns:richtexteditor="sap.ui.richtexteditor"
+  xmlns:viz="sap.viz.ui5"
+  controllerName="preview.app.controller.MM03View"
+  displayBlock="true">
+  <Page title="MM03View" enableScrolling="true">
+    <content>
+      <Title id="title_99ypnd9y" text="Material Master Data (MM03)"/>
+      <form:SimpleForm id="formContainer1">
+        <form:content>
+          <!-- Empty SimpleForm content -->
+        </form:content>
+      </form:SimpleForm>
+      <Button id="saveButton" text="Save"/>
+      <MessagePopover id="messageArea"/>
+    </content>
+  </Page>
+</mvc:View>
