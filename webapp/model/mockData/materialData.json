@@ -1,0 +1,74 @@
+{
+  "materialData": [
+    {
+      "materialNumber": "MAT0001",
+      "materialDescription": "Generic Material 1",
+      "plant": "Plant A",
+      "materialGroup": "Group X",
+      "baseUnit": "EA"
+    },
+    {
+      "materialNumber": "MAT0002",
+      "materialDescription": "Generic Material 2",
+      "plant": "Plant B",
+      "materialGroup": "Group Y",
+      "baseUnit": "KG"
+    },
+    {
+      "materialNumber": "MAT0003",
+      "materialDescription": "Generic Material 3",
+      "plant": "Plant C",
+      "materialGroup": "Group Z",
+      "baseUnit": "L"
+    },
+    {
+      "materialNumber": "MAT0004",
+      "materialDescription": "Generic Material 4",
+      "plant": "Plant A",
+      "materialGroup": "Group X",
+      "baseUnit": "EA"
+    },
+    {
+      "materialNumber": "MAT0005",
+      "materialDescription": "Generic Material 5",
+      "plant": "Plant B",
+      "materialGroup": "Group Y",
+      "baseUnit": "KG"
+    },
+    {
+      "materialNumber": "MAT0006",
+      "materialDescription": "Generic Material 6",
+      "plant": "Plant C",
+      "materialGroup": "Group Z",
+      "baseUnit": "L"
+    },
+    {
+      "materialNumber": "MAT0007",
+      "materialDescription": "Generic Material 7",
+      "plant": "Plant A",
+      "materialGroup": "Group X",
+      "baseUnit": "EA"
+    },
+    {
+      "materialNumber": "MAT0008",
+      "materialDescription": "Generic Material 8",
+      "plant": "Plant B",
+      "materialGroup": "Group Y",
+      "baseUnit": "KG"
+    },
+    {
+      "materialNumber": "MAT0009",
+      "materialDescription": "Generic Material 9",
+      "plant": "Plant C",
+      "materialGroup": "Group Z",
+      "baseUnit": "L"
+    },
+    {
+      "materialNumber": "MAT0010",
+      "materialDescription": "Generic Material 10",
+      "plant": "Plant A",
+      "materialGroup": "Group X",
+      "baseUnit": "EA"
+    }
+  ]
+}

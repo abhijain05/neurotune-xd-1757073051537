@@ -1,23 +1,94 @@
-<?xml version="1.0" encoding="UTF-8"?>
 <mvc:View xmlns:mvc="sap.ui.core.mvc"
   xmlns="sap.m"
   xmlns:layout="sap.ui.layout"
   xmlns:form="sap.ui.layout.form"
   xmlns:core="sap.ui.core"
-  xmlns:richtexteditor="sap.ui.richtexteditor"
-  xmlns:viz="sap.viz.ui5"
-  controllerName="preview.app.controller.MM03View"
-  displayBlock="true">
-  <Page title="MM03View" enableScrolling="true">
+  controllerName="converted.mm03view.controller.MM03View"
+  displayBlock="true"
+          xmlns:commons="sap.ui.commons">
+  <Page title="Material Master Data (MM03)" enableScrolling="true">
     <content>
-      <Title id="title_99ypnd9y" text="Material Master Data (MM03)"/>
-      <form:SimpleForm id="formContainer1">
+      <!-- Page Title -->
+      <Title id="title" text="Material Master Data (MM03)"/>
+
+      <!-- Material Data Form -->
+      <form:SimpleForm id="formContainer1" layout="ResponsiveGridLayout"
+        editable="false" title="Material Details">
         <form:content>
-          <!-- Empty SimpleForm content -->
+          <Label text="Material Number"/>
+          <Input id="materialNumberField" value="{materialData>/materialData/materialNumber}"
+            enabled="false"/>
+
+          <Label text="Material Description"/>
+          <Input id="materialDescriptionField"
+            value="{materialData>/materialData/materialDescription}"/>
+
+          <Label text="Plant"/>
+          <Input id="plantField" value="{materialData>/materialData/plant}"/>
+
+          <Label text="Material Group"/>
+          <Input id="materialGroupField" value="{materialData>/materialData/materialGroup}"/>
+
+          <Label text="Base Unit of Measure"/>
+          <Input id="baseUnitField" value="{materialData>/materialData/baseUnit}"/>
         </form:content>
       </form:SimpleForm>
-      <Button id="saveButton" text="Save"/>
-      <MessagePopover id="messageArea"/>
+
+      <!-- Table to display Material Data -->
+      <Table id="materialTable" items="{materialData>/materialData}" headerText="Material List"
+        growing="true" growingThreshold="10">
+        <columns>
+          <Column>
+            <header>
+              <Text text="Material Number"/>
+            </header>
+          </Column>
+          <Column>
+            <header>
+              <Text text="Material Description"/>
+            </header>
+          </Column>
+          <Column>
+            <header>
+              <Text text="Plant"/>
+            </header>
+          </Column>
+          <Column>
+            <header>
+              <Text text="Material Group"/>
+            </header>
+          </Column>
+          <Column>
+            <header>
+              <Text text="Base Unit"/>
+            </header>
+          </Column>
+        </columns>
+        <items>
+          <ColumnListItem>
+            <cells>
+              <Text text="{materialData>materialNumber}"/>
+              <Text text="{materialData>materialDescription}"/>
+              <Text text="{materialData>plant}"/>
+              <Text text="{materialData>materialGroup}"/>
+              <Text text="{materialData>baseUnit}"/>
+            </cells>
+          </ColumnListItem>
+        </items>
+      </Table>
+
+      <!-- Search Field -->
+      <SearchField id="searchField" search="onSearch" width="100%"
+        placeholder="Search Material Description"/>
+
+      <!-- Save Button -->
+      <Button id="saveButton" text="Save" type="Emphasized" press="onSave"/>
+
+      <!-- Export to CSV Button -->
+      <Button id="exportButton" text="Export to CSV" press="onExportToCSV"/>
+
+      <!-- Message Popover Button -->
+      <MessagePopover id="messageArea" type="Emphasized"/>
     </content>
   </Page>
 </mvc:View>

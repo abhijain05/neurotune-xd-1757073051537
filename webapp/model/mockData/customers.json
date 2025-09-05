@@ -1,0 +1,94 @@
+{
+  "customers": [
+    {
+      "customerId": "CUST-10001",
+      "fullName": "John Smith",
+      "email": "john.smith@example.com",
+      "phone": "555-123-4567",
+      "address": "123 Main St, Anytown USA",
+      "creationDate": "2023-01-15",
+      "status": "Active"
+    },
+    {
+      "customerId": "CUST-10002",
+      "fullName": "Alice Johnson",
+      "email": "alice.johnson@example.com",
+      "phone": "555-987-6543",
+      "address": "456 Elm St, Anytown USA",
+      "creationDate": "2023-02-20",
+      "status": "Inactive"
+    },
+    {
+      "customerId": "CUST-10003",
+      "fullName": "Robert Williams",
+      "email": "robert.williams@example.com",
+      "phone": "555-246-8013",
+      "address": "789 Oak St, Anytown USA",
+      "creationDate": "2023-03-25",
+      "status": "Active"
+    },
+    {
+      "customerId": "CUST-10004",
+      "fullName": "Emily Brown",
+      "email": "emily.brown@example.com",
+      "phone": "555-135-7924",
+      "address": "101 Pine St, Anytown USA",
+      "creationDate": "2023-04-30",
+      "status": "Active"
+    },
+    {
+      "customerId": "CUST-10005",
+      "fullName": "Michael Davis",
+      "email": "michael.davis@example.com",
+      "phone": "555-864-2015",
+      "address": "222 Maple St, Anytown USA",
+      "creationDate": "2023-05-05",
+      "status": "Inactive"
+    },
+    {
+      "customerId": "CUST-10006",
+      "fullName": "Linda Wilson",
+      "email": "linda.wilson@example.com",
+      "phone": "555-975-3126",
+      "address": "333 Cherry St, Anytown USA",
+      "creationDate": "2023-06-10",
+      "status": "Active"
+    },
+    {
+      "customerId": "CUST-10007",
+      "fullName": "David Garcia",
+      "email": "david.garcia@example.com",
+      "phone": "555-741-5237",
+      "address": "444 Walnut St, Anytown USA",
+      "creationDate": "2023-07-15",
+      "status": "Active"
+    },
+    {
+      "customerId": "CUST-10008",
+      "fullName": "Barbara Rodriguez",
+      "email": "barbara.rodriguez@example.com",
+      "phone": "555-852-6348",
+      "address": "555 Oak St, Anytown USA",
+      "creationDate": "2023-08-20",
+      "status": "Inactive"
+    },
+    {
+      "customerId": "CUST-10009",
+      "fullName": "James Martinez",
+      "email": "james.martinez@example.com",
+      "phone": "555-369-1470",
+      "address": "666 Pine St, Anytown USA",
+      "creationDate": "2023-09-25",
+      "status": "Active"
+    },
+    {
+      "customerId": "CUST-10010",
+      "fullName": "Elizabeth Anderson",
+      "email": "elizabeth.anderson@example.com",
+      "phone": "555-159-2681",
+      "address": "777 Maple St, Anytown USA",
+      "creationDate": "2023-10-30",
+      "status": "Active"
+    }
+  ]
+}
